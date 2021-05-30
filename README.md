@@ -1,3 +1,3 @@
 # basic_phrases
 
-## Getting Started
+![Basic phrases](readme_images/Screenshot_30.png)

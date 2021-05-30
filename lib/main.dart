@@ -43,7 +43,12 @@ class _BasicPhrasesState extends State<BasicPhrases> {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Basic phrases'),
+          title: const Text(
+            'Basic phrases',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
           centerTitle: true,
           backgroundColor: Colors.amberAccent,
           elevation: 0.0,
@@ -73,12 +78,19 @@ class _BasicPhrasesState extends State<BasicPhrases> {
                   await _audioCache.clearAll();
                 },
                 child: index.isEven
-                    ? Text(_soundsMap.elementAt(index ~/ 2))
-                    : Text('${_soundsMap.elementAt((index - 1) ~/ 2)}(germana)'),
+                    ? Text(
+                        _soundsMap.elementAt(index ~/ 2),
+                        style: const TextStyle(fontSize: 25.0),
+                      )
+                    : Text(
+                        '${_soundsMap.elementAt((index - 1) ~/ 2)} (germana)',
+                        style: const TextStyle(fontSize: 25.0),
+                        textAlign: TextAlign.center,
+                      ),
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(15.0),
-                color: index.isEven ? Colors.amber : Colors.red,
+                color: Colors.amber,
               ),
             );
           },
